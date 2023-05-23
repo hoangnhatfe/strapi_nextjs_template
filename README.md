@@ -21,9 +21,7 @@ strapi_nextjs_template is a template boilerplate that combines the power of Stra
 1. Clone the repository locally:
 
 ```bash
-  git clone https://github.com/strapi/nextjs-corporate-starter.git
-    or
-  gh repo clone strapi/nextjs-corporate-starter
+  git clone https://github.com/hoangnhatfe/strapi_nextjs_template.git
 ```
 
 2. CD into `backend` directory and run the following command to install all the dependencies:
