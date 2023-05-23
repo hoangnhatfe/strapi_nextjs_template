@@ -1,0 +1,39 @@
+{
+  "collectionName": "components_sections_start_sections",
+  "info": {
+    "displayName": "Start section",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "button": {
+      "type": "component",
+      "repeatable": false,
+      "component": "links.button-link"
+    },
+    "picture": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "background": {
+      "type": "enumeration",
+      "enum": [
+        "white",
+        "gray"
+      ]
+    }
+  }
+}

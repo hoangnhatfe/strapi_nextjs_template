@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_layout_backgrounds",
+  "info": {
+    "displayName": "background"
+  },
+  "options": {},
+  "attributes": {
+    "background": {
+      "type": "enumeration",
+      "enum": [
+        "white",
+        "gray"
+      ]
+    }
+  }
+}

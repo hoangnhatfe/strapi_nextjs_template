@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_elements_icon_groups",
+  "info": {
+    "displayName": "Icon group"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "iconName": {
+      "type": "string"
+    }
+  }
+}
