@@ -1,3 +1,4 @@
+import { PageWrapper } from './components/PageWrapper';
 import { fetchAPI } from './utils/fetch-api';
 import { sectionRenderer } from './utils/section-renderer';
 
@@ -15,5 +16,9 @@ export default async function RootRoute({ params }: { params: { lang: string } }
     const page = await getPageBySlug('home', params.lang);
     const contentSections = page.data[0].attributes.contentSections;
 
-    return contentSections.map((section: any, index: number) => sectionRenderer(section, index));
+    return (
+        <PageWrapper>
+            { contentSections.map((section: any, index: number) => sectionRenderer(section, index)) }
+        </PageWrapper>
+    )
 }

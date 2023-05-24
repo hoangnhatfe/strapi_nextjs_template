@@ -5,6 +5,7 @@ import { fetchAPI } from "@/app/[lang]/utils/fetch-api";
 import { formatDate, getStrapiMedia } from "@/app/[lang]/utils/api-helpers";
 import Image from "next/image"
 import Link from "next/link";
+import { PageWrapper } from "@/app/[lang]/components/PageWrapper";
 
 async function fetchSideMenuData(filter: string, slug: string, lang: string) {
   try {
@@ -136,7 +137,7 @@ export default async function LayoutRoute({
   const { categories, articles, article } = (await fetchSideMenuData(category, slug, lang)) as Data;
   const imageUrl = getStrapiMedia(article.attributes.cover.data.attributes.url)
   return (
-    <>
+    <PageWrapper>
       <section className="py-28 w-full table relative">
         {imageUrl && (
           <Image 
@@ -235,7 +236,7 @@ export default async function LayoutRoute({
         </div>
 
       </section>
-    </>
+    </PageWrapper>
   );
 }
 

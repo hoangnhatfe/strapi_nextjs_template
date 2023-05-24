@@ -3,7 +3,7 @@ import Logo from "./Logo";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
-
+ 
 interface NavLink {
   id: number;
   url: string;
@@ -37,9 +37,8 @@ export default function Navbar({
   links: Array<NavLink>;
   logoUrl: string | null;
   logoText: string | null;
-  lang: string | "en"
+  lang: string;
 }) {
-
   const [scroll, setScroll] = useState(false);
   const router = useRouter();
   const pathname = usePathname();
@@ -88,8 +87,8 @@ export default function Navbar({
                   defaultValue={pathname}
                   onChange={(e) => router.push(e.target.value)}
                 >
-                  <option value="/en">English</option>
-                  <option value="/fr">France</option>
+                  <option value="/en">En</option>
+                  <option value="/fr">Fr</option>
                 </select>
             </div>
         </div>

@@ -7,6 +7,7 @@ import { i18n } from "../../../i18n-config";
 import Banner from "./components/Banner";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
+import AnimatePresence from "./components/AnimatePresence";
 
 async function getGlobal(lang: string): Promise<any> {
   const token = process.env.NEXT_STRAPI_API_TOKEN;
@@ -80,10 +81,12 @@ export default async function RootLayout({
           lang={params.lang}
           logoText={navbar.navbarLogo.logoText}
         />
-
-        <main className="dark:bg-black dark:text-gray-100 min-h-screen">
-          {children}
-        </main>
+        
+          <main className="dark:bg-slate-900 dark:text-gray-100 min-h-screen">
+            <AnimatePresence>
+              {children}
+            </AnimatePresence>
+          </main>
 
         <Banner data={notificationBanner} />
 

@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import PageHeader from '../components/PageHeader';
 import { fetchAPI } from '../utils/fetch-api';
 import { sectionRenderer } from '../utils/section-renderer';
+import { PageWrapper } from '../components/PageWrapper';
 
 async function getPageBySlug(slug: string, lang: string) {
     const token = process.env.NEXT_STRAPI_API_TOKEN;
@@ -41,9 +42,8 @@ export default async function RootRoute({ params }: { params: { slug:string; lan
     const contentSections = page.data[0].attributes.contentSections;
 
     return (
-      <div>
-        {/* <PageHeader heading='Page title' /> */}
+      <PageWrapper>
         { contentSections.map((section: any, index: number) => sectionRenderer(section, index)) }
-      </div>
+      </PageWrapper>
     );
 }

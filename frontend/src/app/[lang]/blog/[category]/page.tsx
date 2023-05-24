@@ -2,6 +2,7 @@ import PageHeader from '@/app/[lang]/components/PageHeader';
 import { fetchAPI } from '@/app/[lang]/utils/fetch-api';
 import BlogList from '@/app/[lang]/views/blog-list';
 import { Metadata } from 'next';
+import { PageWrapper } from '../../components/PageWrapper';
 
 async function fetchPostsByCategory(filter: string, lang: string) {
     try {
@@ -50,10 +51,10 @@ export default async function CategoryRoute({ params }: { params: { category: st
     const { name, description } = data[0]?.attributes.category.data.attributes;
 
     return (
-        <div>
+        <PageWrapper>
             <PageHeader heading={name} text={description} />
             <BlogList data={data} lang={params.lang}/>
-        </div>
+        </PageWrapper>
     );
 }
 

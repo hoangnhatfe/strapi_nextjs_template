@@ -5,6 +5,7 @@ import { fetchAPI } from "../utils/fetch-api";
 import Loader from "../components/Loader";
 import Blog from "../views/blog-list";
 import PageHeader from "../components/PageHeader";
+import { PageWrapper } from "../components/PageWrapper";
 
 interface Meta {
   pagination: {
@@ -68,7 +69,7 @@ export default function BlogPage({ params }: { params: { lang: string } }) {
   if (isLoading) return <Loader />;
 
   return (
-    <div>
+    <PageWrapper>
       <PageHeader heading="Our Blog" text="Checkout Something Cool" />
       <Blog data={data} lang={params.lang}>
         {meta!.pagination.start + meta!.pagination.limit <
@@ -84,6 +85,6 @@ export default function BlogPage({ params }: { params: { lang: string } }) {
           </div>
         )}
       </Blog>
-    </div>
+    </PageWrapper>
   );
 }
