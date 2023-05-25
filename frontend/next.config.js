@@ -13,6 +13,11 @@ const nextConfig = {
         port: '1337',
         pathname: '/uploads/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'strapi-nextjs-template.vercel.app',
+        pathname: '/uploads/**',
+      },
     ],
   },
 }
