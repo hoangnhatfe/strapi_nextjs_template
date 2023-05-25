@@ -15,7 +15,7 @@ const nextConfig = {
       },
       {
         protocol: 'https',
-        hostname: 'strapi-nextjs-template.vercel.app',
+        hostname: 'strarter-strapi-nextjs.briandev.info',
         pathname: '/uploads/**',
       },
     ],
