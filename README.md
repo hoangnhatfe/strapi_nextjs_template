@@ -1,6 +1,9 @@
+
 # Strapi Starter Nextjs 13, i18n, SSR, TailwindCSS
 
 strapi_nextjs_template is a template boilerplate that combines the power of Strapi and Next.js to help you quickly build SEO-friendly and internationalized web applications. With Strapi as the headless CMS and Next.js for server-side rendering and app routing, you can create dynamic and optimized websites with ease.
+
+![Cover](https://github.com/hoangnhatfe/strapi_nextjs_template/assets/86102501/df8a1c11-16a3-408b-a346-29dcb30858f9)
 
 ## ✨ Features
 
